@@ -1,0 +1,14 @@
+*/数据文件文件夹程序迭代器（单输入输出文件夹版）*/
+现在你需要写代码了，在script文件夹下编写并保存python程序"AOP-based_Circular_Data_Program.py"，
+首先"AOP-based_Circular_Data_Program.py"要接收输入，注意：下文两个数据文件文件夹如果不存在，则自动创建
+第一个是"输入数据文件文件夹"，默认值为r"E:\Python\PycharmProject-202505-时间序列仓库\数据-20250926-[csv,dat]\data-v1.02"
+第二个是"输出数据文件文件夹"，默认值为r"E:\Python\PycharmProject-202505-时间序列仓库\数据-20250926-[csv,dat]\data-v1.03"
+第三个是"程序文件文件夹"，默认值为r"E:\Python\PycharmProject-202505-时间序列工厂\dat文件-20260311"
+第四个是"程序文件名"，默认值为r"a.py"
+第五个是"被调用函数"，默认值为r"main"
+然后，把"程序文件文件夹"文件夹下的"a.py"文件复制到"AOP-based_Circular_Data_Program.py"所在文件夹，同时把"a.py"文件重命名为"copy_program.py"，
+之后，"AOP-based_Circular_Data_Program.py"使用import语句导入"copy_program.py"文件，
+接着，使用os库获取"输入数据文件文件夹"文件夹下的文件列表，通过遍历这个列表的形式来创建一个循环，在这个循环中，每遍历一个元素：
+	将"输入数据文件文件夹"与被遍历元素拼接成文件路径，再将"输出数据文件文件夹"与被遍历元素拼接成文件路径，把两个文件夹组合成一个列表
+	然后调用"被调用函数"，把上述列表作为"被调用函数"的参数，等"被调用函数"返回后，该轮循环结束
+最后，考虑使用多线程来加速上述循环
